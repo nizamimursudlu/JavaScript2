@@ -32,10 +32,6 @@ const app = () => {
       seconds.innerHTML = `${00}`
     }
   })
-
-
-
-
   countDown = () => {
     if (minutes === 0 && seconds === "00") {
       interval = window.setInterval(countDown, 1000);
@@ -52,13 +48,6 @@ const app = () => {
       time--;
     }
   }
-
-
-
-
-
-
-
   playStop.addEventListener("click", function startStop() {
     if (status === "stopped") {
       interval = window.setInterval(countDown, 1000);
