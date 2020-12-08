@@ -10,20 +10,23 @@ const app = () => {
   let setTime = document.querySelector(".set-time")
   let interval = null;
   let status = "stopped";
+  let time = 0;
 
 
-  minutes = setTime.innerText;
-
-
+  //
   let seconds = "00"
-  var time = parseFloat(setTime.innerHTML) * 60
+  //timeDisplay.innerHTML = `${minutes}:${seconds}`
+  //minutes = parseFloat(setTime.innerHTML)
+
 
 
   arrowUp.addEventListener("click", function () {
     if (status === "stopped") {
-      minutes = parseFloat(timeDisplay.innerHTML);
-      timeDisplay.innerHTML = `${minutes + 1}:${seconds}`
-      setTime.innerHTML = `${minutes + 1}`
+      setTime.innerHTML++
+      time = parseFloat(setTime.innerHTML) * 60
+      let minutes = parseFloat(setTime.innerHTML)
+      minutes = parseFloat(setTime.innerHTML);
+      timeDisplay.innerHTML = `${minutes}:${seconds}`
       seconds.innerHTML = `${"00"}`
 
     }
@@ -31,10 +34,13 @@ const app = () => {
   })
   arrowDowm.addEventListener("click", function () {
     if (status === "stopped") {
-      minutes = parseFloat(setTime.innerHTML);
-      timeDisplay.innerHTML = `${minutes - 1}:${seconds}`
-      setTime.innerHTML = `${minutes - 1}`
+      setTime.innerHTML--
+      time = parseFloat(setTime.innerHTML) * 60
+      let minutes = parseFloat(setTime.innerHTML);
+      timeDisplay.innerHTML = `${minutes}:${seconds}`
+      // setTime.innerHTML = `${minutes - 1}`
       seconds.innerHTML = `${00}`
+
     }
   })
   countDown = () => {
