@@ -5,14 +5,18 @@ const app = () => {
   const arrowUp = document.querySelector(".arrow-up")
   const arrowDowm = document.querySelector(".arrow-down")
   // const seconds = document.querySelector(".seconds")
-  // const minutes = document.querySelector(".minutes")
+  let minutes = document.querySelector(".minutes")
   const timeDisplay = document.querySelector("#time-display")
   let setTime = document.querySelector(".set-time")
   let interval = null;
-  let status = "stopped"
-  let minutes = 25
-  seconds = "00"
-  var time = minutes * 60
+  let status = "stopped";
+
+
+  minutes = setTime.innerText;
+
+
+  let seconds = "00"
+  var time = parseFloat(setTime.innerHTML) * 60
 
 
   arrowUp.addEventListener("click", function () {
@@ -21,12 +25,13 @@ const app = () => {
       timeDisplay.innerHTML = `${minutes + 1}:${seconds}`
       setTime.innerHTML = `${minutes + 1}`
       seconds.innerHTML = `${"00"}`
+
     }
 
   })
   arrowDowm.addEventListener("click", function () {
     if (status === "stopped") {
-      minutes = parseFloat(timeDisplay.innerHTML);
+      minutes = parseFloat(setTime.innerHTML);
       timeDisplay.innerHTML = `${minutes - 1}:${seconds}`
       setTime.innerHTML = `${minutes - 1}`
       seconds.innerHTML = `${00}`
@@ -40,7 +45,6 @@ const app = () => {
 
     }
     else {
-
       minutes = Math.floor(time / 60);
       seconds = Math.floor(time % 60);
       seconds = seconds < 10 ? "0" + seconds : seconds
