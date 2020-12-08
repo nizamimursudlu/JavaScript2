@@ -9,8 +9,6 @@ startPoint();
 let walkTheCat = function () {
   let position = parseFloat(catEl.style.left);
 
-  catEl.style.left = (position + 10).toString().concat("px");
-
   let screenMiddle = (window.innerWidth - catEl.width) / 2;
 
   if (position < screenMiddle - 10 || position > screenMiddle + 10) {
