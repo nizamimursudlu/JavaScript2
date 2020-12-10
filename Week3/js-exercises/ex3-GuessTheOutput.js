@@ -19,3 +19,5 @@ const x = (function () {
 })();
 
 x();
+
+The output is going to be 12, because variable "a" is going to take the value from the nearest parent.

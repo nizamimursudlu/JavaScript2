@@ -17,6 +17,12 @@ function f1(val) {
 f1(x);
 console.log(x);
 
+// x = 9, besauce console.loxg(x) is located outside of the function block,
+// so it doesnt see that the value has changed in there,
+// when the first line: const x = 9 is located on the global scope,
+// vabiables from the global scope are accessible any other scope
+
+
 const y = {
   x: 9
 };
@@ -27,3 +33,8 @@ function f2(val) {
 }
 f2(y);
 console.log(y);
+
+// x: 10, because in this case on the first line y get value of x: 9 in a block as well,
+// so when you concole.log(y) js uses the nearest value of y it can find
+
+
