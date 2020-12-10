@@ -15,16 +15,14 @@
 
 const letters = ['a', 'b', 'b', 'c', 'd', 'a', 'e', 'f', 'f', 'c', 'b'];
 const alphabeticalOrder = letters.sort()
-const newArray = [];
 
-for (i = 0; i < alphabeticalOrder.length; i++) {
-  if (alphabeticalOrder[i] !== alphabeticalOrder[i + 1]) {
-    newArray.push(alphabeticalOrder[i])
+function removeDuplicates(letters) {
+  for (let i = 1; i < letters.length; i++) {
+    let newArr = letters.filter(letter => letter !== letters[i++])
+    return newArr
   }
 }
-
-console.log(newArray)
-
+console.log(removeDuplicates(letters))
 
 
 
