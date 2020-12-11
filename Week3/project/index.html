@@ -4,12 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Tip Calculator</title>
 </head>
 
 <body>
-  <div id="app"></div>
-  <script src="index.js"></script>
+  <div id="container">
+
+    <h3>Tip Calculator</h3>
+    <div id="calculation">
+      <h4>How much was youe bill?</h4>
+      <img scr="https://www.nicepng.com/maxp/u2w7a9t4r5u2u2o0/" />
+      <input type="number" id="bill"></i>
+      <h4>How was your service?</h4>
+      <form action="/action_page.php">
+        <select id="options">
+          <option value="Choose an option">Choose an option</option>
+          <option value="30% - Outstanding">30% - Outstanding</option>
+          <option value="20% - Good">20% - Goo</option>
+          <option value="15% - OK">15% - OK</option>
+          <option value="10% - Bad">10% - Bad</option>
+          <option value="5% - Terrible">5% - Terrible</option>
+        </select>
+      </form>
+      <h4>How many people are sharing the bill?</h4>
+      <input type="number" placeholder="1">
+    </div>
+    <div id="result">
+      <button>Calculate</button>
+    </div>
+  </div>
+
+  <script src="aap.js"></script>
 </body>
 
 </html>

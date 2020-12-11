@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+
+input[type=number] {
+    -moz-appearance:textfield; /* Firefox */
+}
+
+body {
+  background-color: rgb(143, 143, 143);
+ 
+}
+#container {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100px;
+  color:gray;
+  background-color: white;
+  width: 350px;
+  margin: 0 auto;
+  
+  margin-top: 100px;
+  height: 550px;
+  border-radius: 4px;
+}
+h4 {
+  font-size: 14px;
+  color: #666666;
+  padding: 20px 20px 8px 20px;
+  font-weight: 600;
+}
+input{
+  margin:  0px 20px 0px 20px;
+  height: 35px;
+  width: 310px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  outline-color:lightblue;
+  
+}
+h3 {
+  color: #555555;
+  font-size: 16px;
+  padding: 14px 20px 14px 20px;
+  border-bottom: lightgray solid 1px;
+}
+button {
+  background-color: rgb(202, 52, 52);
+  color: white;
+  height: 37px;
+  margin: auto; 
+  margin-top: 15px;
+  width: 90px;
+  outline: none;
+  margin-left: calc(50% - 50px);
+  border-radius: 4px;
+  border-color: transparent;
+}
+button:hover {
+  background-color: darkred;
+
+}
+#options {
+  margin:  0px 20px 0px 20px;
+  height: 35px;
+  width: 310px;
+  padding-left: 10px;
+  color: #666666;
+  outline-color:lightblue;
+}
+option {
+  margin-right: 10px;
+}
+#currencyinput {
+  border: 1px;
+}
+
+
+
+
