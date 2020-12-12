@@ -1,6 +1,6 @@
 function doubleEvenNumbers(numbers) {
   const newNumbers = [];
-  myNumbers.forEach(function (number) {
+  myNumbers.filter(function (number) {
     if (number % 2 === 0) { newNumbers.push(number * 2) }
   })
   return newNumbers;
