@@ -11,8 +11,6 @@ const app = () => {
   let interval = null;
   let status = "stopped";
   let time = 0;
-
-
   //
   let seconds = "00"
   //timeDisplay.innerHTML = `${minutes}:${seconds}`
@@ -24,28 +22,24 @@ const app = () => {
     if (status === "stopped") {
       setTime.innerHTML++
       time = parseFloat(setTime.innerHTML) * 60
-      let minutes = parseFloat(setTime.innerHTML)
-      minutes = parseFloat(setTime.innerHTML);
+      const minutes = parseFloat(setTime.innerHTML)
       timeDisplay.innerHTML = `${minutes}:${seconds}`
       seconds.innerHTML = `${"00"}`
 
     }
-
   })
   arrowDowm.addEventListener("click", function () {
     if (status === "stopped") {
       setTime.innerHTML--
       time = parseFloat(setTime.innerHTML) * 60
-      let minutes = parseFloat(setTime.innerHTML);
+      const minutes = parseFloat(setTime.innerHTML);
       timeDisplay.innerHTML = `${minutes}:${seconds}`
-      // setTime.innerHTML = `${minutes - 1}`
       seconds.innerHTML = `${00}`
 
     }
   })
   countDown = () => {
     if (minutes === 0 && seconds === "00") {
-      interval = window.setInterval(countDown, 1000);
       clearInterval(interval)
       timeDisplay.textContent = `${"Time's up!"}`
 
@@ -60,18 +54,22 @@ const app = () => {
   }
   playStop.addEventListener("click", function startStop() {
     if (status === "stopped") {
+      time = parseFloat(setTime.innerHTML) * 60
+      const minutes = parseFloat(setTime.innerHTML);
       interval = window.setInterval(countDown, 1000);
       playStop.innerHTML = "&#9634;"
       status = "started"
 
+
     }
     else {
-      window.clearInterval(interval)
+      clearInterval(interval)
       minutes = 25;
       seconds = "00"
       timeDisplay.innerHTML = `${minutes}:${seconds}`
       status = "stopped"
-      playStop.innerHTML = "&#9655;"
+
+
     }
   })
 
@@ -79,10 +77,13 @@ const app = () => {
     if (status === "started") {
       window.clearInterval(interval);
       status = "paused"
+      pause.style.color = "gray"
     } else {
+
       interval = window.setInterval(countDown, 1000);
       status = "started"
+      pause.style.color = "white"
     }
   });
 };
-app();
+app()
