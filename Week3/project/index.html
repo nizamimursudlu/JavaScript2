@@ -17,7 +17,7 @@
       <h4>How was your service?</h4>
       <form action="/action_page.php">
         <select id="dropdown">
-          <option value="Choose an option">Choose an option</option>
+          <option value="">Choose an option...</option>
           <option value="30" id="outstanding">30% - Outstanding</option>
           <option value=20>20% - Good</option>
           <option value="15">15% - OK</option>
@@ -30,10 +30,16 @@
     </div>
     <div id="result">
       <button id="calculate">Calculate</button>
-      <input id="total">
+      <input type="text" id="total">
     </div>
   </div>
-
+  <div class="modal-bg">
+    <div class="modal">
+      <h3>Information</h2>
+        <h4>Fill in all the fields!</p>
+          <button id="modal-btn">OK</button>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 
