@@ -19,7 +19,6 @@ function createBase(x) {
 }
 
 const addSix = createBase(6);
-result = createBase(6)()
 console.log(addSix())
 console.log(addSix())
 console.log(addSix())
