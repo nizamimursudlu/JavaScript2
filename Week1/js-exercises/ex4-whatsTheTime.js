@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  
  ** Exercise 4: What 's the time? **
@@ -16,6 +17,10 @@ let currentTime = document.getElementById("current-time")
 function displayCurrentTime() {
   // your code goes in here
 
+=======
+let currentTime = document.getElementById("current-time")
+function displayCurrentTime() {
+>>>>>>> a1a506e799c6d2a123d05e9f776384aba1db3171
   let today = new Date();
   let h = today.getHours();
   let m = today.getMinutes();
@@ -26,5 +31,4 @@ function displayCurrentTime() {
   currentTime.innerHTML = `${h}:${m}:${s}`;
   // currentTime.innerHTML = timeOutput;
 }
-
 setInterval(displayCurrentTime, 1000);

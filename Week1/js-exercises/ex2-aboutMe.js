@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
 
  ** Exercise 2: About me **
@@ -9,6 +10,8 @@
  5. See HTML
  6. Create a new img element and set its src attribute to a picture of you.Append that element to the page.
  */
+=======
+>>>>>>> a1a506e799c6d2a123d05e9f776384aba1db3171
 document.body.style.fontFamily = "Arial, sans-serif";
 
 

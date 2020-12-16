@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> a1a506e799c6d2a123d05e9f776384aba1db3171
 const books = [{
   title: 'The Little Prince',
   author: 'Antoine De Saint-Exupéry',
@@ -39,4 +43,8 @@ for (i = 0; i < 3; i++) {
   }
 }
 
+<<<<<<< HEAD
 book.style.cssText = "display: flex; flex-direction: row; justify-content: space-between;text-align: center;"
+=======
+book.style.cssText = "display: flex; flex-direction: row; justify-content: space-between;text-align: center;"
+>>>>>>> a1a506e799c6d2a123d05e9f776384aba1db3171

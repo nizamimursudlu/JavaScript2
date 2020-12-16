@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  
  ** Exercise 5: The cat walk **
@@ -12,6 +13,8 @@
  
 */
 
+=======
+>>>>>>> a1a506e799c6d2a123d05e9f776384aba1db3171
 let catEl = document.getElementById("cat");
 const catSize = catEl.width
 
@@ -20,7 +23,10 @@ function startPoint() {
 }
 startPoint();
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> a1a506e799c6d2a123d05e9f776384aba1db3171
 let walkTheCat = function () {
   let position = parseFloat(catEl.style.left);
 
@@ -44,4 +50,8 @@ let walkTheCat = function () {
   }
 }
 
+<<<<<<< HEAD
 let interval = setInterval(walkTheCat, 50);
+=======
+let interval = setInterval(walkTheCat, 50);
+>>>>>>> a1a506e799c6d2a123d05e9f776384aba1db3171
