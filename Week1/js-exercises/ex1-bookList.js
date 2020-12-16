@@ -1,42 +1,42 @@
-/**
-  
- ** Exercise 1: The book list **
-
-  I 'd like to display my three favorite books inside a nice webpage!
-
-  1. Iterate through the array of books.
-  2. For each book, create a `<p>`
-  element with the book title and author and append it to the page.
-  3. Use a `<ul>`  and `<li>` to display the books.
-  4. Add an `<img>` to each book that links to a URL of the book cover.
-  5. Change the style of the book depending on whether you have read it(green) or not(red).
-
-  The end result should look something like this:
-  https: //hyf-js2-week1-makeme-ex1-demo.herokuapp.com/
-
-  */
+const books = [{
+  title: 'The Little Prince',
+  author: 'Antoine De Saint-Exupéry',
+  alreadyRead: true
+},
+{
+  title: 'Veronica Decides To Die',
+  author: 'Paulo Coelho',
+  alreadyRead: false
+},
+{
+  title: 'Anna Karenina',
+  author: 'Leo Tolstoy',
+  alreadyRead: true
+}
+];
+const book = document.querySelector("#bookList")
+const ulElement = createBookList(books);
+const arrImages = ["https://www.booktopia.com.au/http_coversbooktopiacomau/big/9781853261589/0000/the-little-prince.jpg",
+  "https://images-na.ssl-images-amazon.com/images/I/411YxgRv1bL._SX324_BO1,204,203,200_.jpg",
+  "https://images-na.ssl-images-amazon.com/images/I/51vPf2CfSEL.jpg"]
 
 function createBookList(books) {
-  // your code goes in here, return the ul element
+  let li = document.createElement('li');
+  li.textContent = books;
+  return li
 }
 
-const books = [{
-    title: 'The Design of Everyday Things',
-    author: 'Don Norman',
-    alreadyRead: false
-  },
-  {
-    title: 'The Most Human Human',
-    author: 'Brian Christian',
-    alreadyRead: true
-  },
-  {
-    title: 'The Pragmatic Programmer',
-    author: 'Andrew Hunt',
-    alreadyRead: true
+for (i = 0; i < 3; i++) {
+  const image = document.createElement("img");
+  image.src = arrImages[i]
+  const paragraph = document.createElement("p")
+  paragraph.innerHTML = `${books[i].title} by ${books[i].author} `
+  book.appendChild(createBookList(books[i]).appendChild(paragraph)).appendChild(image)
+  if ((books[i].alreadyRead) === true) {
+    paragraph.style.cssText = "background-color:green;"
+  } else {
+    paragraph.style.cssText = "background-color:red;"
   }
-];
+}
 
-let ulElement = createBookList(books);
-
-document.querySelector("#bookList").appendChild(ulElement);
+book.style.cssText = "display: flex; flex-direction: row; justify-content: space-between;text-align: center;"
