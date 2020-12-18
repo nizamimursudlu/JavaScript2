@@ -20,4 +20,6 @@ const x = (function () {
 
 x();
 
-The output is going to be 12, because variable "a" is going to take the value from the nearest parent.
+// The output is going to be 12, because variable "a" is not being created,
+// three is no 'var' or 'let' in front of it. So its the same variable that was created in line 13,
+// and its value is going to be overwritten to 12.
