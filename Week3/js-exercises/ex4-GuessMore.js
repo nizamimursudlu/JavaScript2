@@ -34,7 +34,8 @@ function f2(val) {
 f2(y);
 console.log(y);
 
-// x: 10, because in this case in the first line 'y' get value of x: 9 in a block as well,
-// so when you concole.log(y) js uses the nearest value of y it can find
+// x: 10, because in this case in the first line 'y' get value of x: 9 in a object,
+// curly brackets of an object to not make a block, so console can see it
+// val.x is referensed to an object to so the value of 'y' changes
 
 
