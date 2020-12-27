@@ -16,28 +16,28 @@ const books = [{
 }
 ];
 const book = document.querySelector("#bookList")
-const ulElement = createBookList(books);
+
 const arrImages = ["https://www.booktopia.com.au/http_coversbooktopiacomau/big/9781853261589/0000/the-little-prince.jpg",
   "https://images-na.ssl-images-amazon.com/images/I/411YxgRv1bL._SX324_BO1,204,203,200_.jpg",
   "https://images-na.ssl-images-amazon.com/images/I/51vPf2CfSEL.jpg"]
 
-function createBookList(books) {
-  let li = document.createElement('li');
-  li.textContent = books;
-  return li
-}
+const ul = document.getElementById("ul")
 
-for (i = 0; i < 3; i++) {
-  const image = document.createElement("img");
-  image.src = arrImages[i]
+const paragraphOne = document.getElementById("paragraph-one")
+
+for (let i = 0; i < books.length; i++) {
+  const li = document.createElement("li")
+  ul.appendChild(li)
   const paragraph = document.createElement("p")
+  li.appendChild(paragraph)
   paragraph.innerHTML = `${books[i].title} by ${books[i].author} `
-  book.appendChild(createBookList(books[i]).appendChild(paragraph)).appendChild(image)
+  const image = document.createElement("img");
+  paragraph.appendChild(image)
+  image.src = arrImages[i]
+
   if ((books[i].alreadyRead) === true) {
-    paragraph.style.cssText = "background-color:green;"
+    li.style.cssText = "background-color:green;"
   } else {
-    paragraph.style.cssText = "background-color:red;"
+    li.style.cssText = "background-color:red;"
   }
 }
-
-book.style.cssText = "display: flex; flex-direction: row; justify-content: space-between;text-align: center;"
